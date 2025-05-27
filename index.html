@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tempus LX - O Relógio da Nova Geração</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    .hero {
+      background: url('https://i.imgur.com/VpqOI4W.jpeg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #000;
+      color: #fff;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 1em;
+      border-radius: 8px;
+    }
+
+    .features {
+      padding: 50px 20px;
+      text-align: center;
+      background: white;
+    }
+
+    .features h2 {
+      margin-bottom: 30px;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features li {
+      margin: 15px 0;
+    }
+
+    .form-section {
+      background: #000;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      margin-right: 10px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #e91e63;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Tempus LX</h1>
+    <p>Redefina seu tempo com o relógio que une tecnologia e elegância.</p>
+    <a href="#comprar" class="btn">Quero o meu agora</a>
+  </section>
+
+  <section class="features">
+    <h2>Por que escolher o Tempus LX?</h2>
+    <ul>
+      <li>✅ Design minimalista e sofisticado</li>
+      <li>✅ Bateria com até 15 dias de duração</li>
+      <li>✅ Monitoramento cardíaco e de sono</li>
+      <li>✅ À prova d'água e de más decisões</li>
+    </ul>
+  </section>
+
+  <section class="form-section" id="comprar">
+    <h2>Garanta o seu agora</h2>
+    <p>Cadastre seu e-mail para receber um cupom de 10% OFF</p>
+    <form onsubmit="handleForm(event)">
+      <input type="email" placeholder="seuemail@email.com" required />
+      <button type="submit">Quero meu cupom</button>
+    </form>
+    <p id="feedback" style="margin-top:20px;"></p>
+  </section>
+
+  <footer>
+    © 2025 Tempus Inc. — Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function handleForm(e) {
+      e.preventDefault();
+      const email = e.target.querySelector('input').value;
+      document.getElementById('feedback').innerText = 
+        'Obrigado! Um cupom foi enviado para ' + email;
+    }
+  </script>
+
+</body>
+</html>
